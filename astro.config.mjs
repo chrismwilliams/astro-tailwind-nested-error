@@ -9,12 +9,11 @@ import autoprefixer from "autoprefixer";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  // postcss config as postcss.config.js is ignored
-  // vite: {
-  //   css: {
-  //     postcss: {
-  //       plugins: [postcssImport, postcssNesting, tailwindcss, autoprefixer],
-  //     },
-  //   },
-  // },
+  vite: {
+    css: {
+      postcss: {
+        plugins: [postcssImport, postcssNesting, tailwindcss, autoprefixer],
+      },
+    },
+  },
 });
